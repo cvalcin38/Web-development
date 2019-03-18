@@ -1,0 +1,75 @@
+body {
+	-ms-overflow-x: hidden;
+}
+#wrapper {
+	transition:0.5s; padding-left: 0px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+}
+.toggled#wrapper {
+	padding-left: 0px;
+}
+#sidebar-wrapper {
+	background: rgb(34, 34, 34); transition:0.5s; left: 250px; top: 50px; width: 250px; height: 100%; margin-left: -250px; position: fixed; z-index: 1000; -ms-overflow-y: auto; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease;
+}
+.toggled#wrapper #sidebar-wrapper {
+	width: 250px;
+}
+#page-content-wrapper {
+	padding: 15px; width: 100%; position: absolute;
+}
+.toggled#wrapper #page-content-wrapper {
+	margin-right: -250px; position: absolute;
+}
+.sidebar-nav {
+	list-style: none; margin: 0px; top: 0px; width: 250px; font-weight: normal; position: absolute;
+}
+.sidebar-nav li {
+	line-height: 30px; text-indent: 20px; font-size: 16px; font-weight: lighter;
+}
+.sidebar-nav li a {
+	color: rgb(205, 205, 205); text-decoration: none; display: block;
+}
+.sidebar-nav li a:hover {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.sidebar-nav li a:active {
+	text-decoration: none;
+}
+.sidebar-nav li a:focus {
+	text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+	height: 65px; line-height: 50px; font-size: 15px;
+}
+.sidebar-nav > .sidebar-brand a {
+	color: rgb(205, 205, 205);
+}
+.sidebar-nav > .sidebar-label {
+	line-height: 25px; text-indent: 20px; padding-top: 10px; font-size: 16px; font-weight: bold;
+}
+.sidebar-nav > .sidebar-label a {
+	color: rgb(205, 205, 205);
+}
+.sidebar-nav > .sidebar-label a:hover {
+	background: none; color: rgb(205, 205, 205);
+}
+@media all and (min-width:768px)
+{
+#sidebar-wrapper {
+	top: 50px;
+}
+}
+#wrapper {
+	padding-left: 250px;
+}
+.toggled#wrapper {
+	padding-left: 0px;
+}
+.toggled#sidebar-wrapper {
+	width: 0px;
+}
+#page-content-wrapper {
+	padding-left: 250px; position: relative;
+}
+#page-content-wrapper {
+	padding-left: 0px; margin-right: 0px; position: relative;
+}
